@@ -81,10 +81,10 @@ def main():
             response = analyze_paragraph(prompt)
             jsonRaw = jsonResponse(response, genaiAPI)
             jsonRaw = jsonRaw.replace("\n", "").replace("  ", "").replace("json", "").replace("`", "")
-            jsonData = json.loads(jsonRaw)
+            #jsonData = json.loads(jsonRaw)
 
             st.subheader("Analysis Result")
-            st.json(jsonData)
+            st.write(jsonRaw)
         else:
             st.error("Please fill in all fields to analyze your paragraph.")
 
