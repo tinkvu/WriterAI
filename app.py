@@ -86,16 +86,22 @@ def main():
             
             # Display the JSON data in a readable format
             st.subheader("Analysis Result")
+            st.write(f"**Summary**: {jsonData['Summary']}")
+            st.write("**Suggestions**:")
+            for suggestion in jsonData['Suggestions']:
+                st.write(f"- {suggestion}")
+            st.write("**Strengths**:")
+            for strength in jsonData['Strengths']:
+                st.write(f"- {strength}")
+            st.write("**Weaknesses**:")
+            for weakness in jsonData['Weaknesses']:
+                st.write(f"- {weakness}")
             st.write(f"**Overall interest**: {jsonData['Overall interest']}")
             st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
             st.write(f"**Build up**: {jsonData['Build up']}")
             st.write(f"**Irregularities**: {jsonData['Irregularities']}")
-            st.write(f"**References**: {jsonData['References']}")
-            st.write(f"**Summary**: {jsonData['Summary']}")
-            st.write(f"**Suggestions**: {jsonData['Suggestions']}")
-            st.write(f"**Strengths**: {jsonData['Strengths']}")
-            st.write(f"**Weaknesses**: {jsonData['Weaknesses']}")
-        
+            st.write(f"**References**: {', '.join(jsonData['References'])}")
+                  
         else:
             st.error("Please fill in all fields to analyze your paragraph.")
 
