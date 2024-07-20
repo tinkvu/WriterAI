@@ -117,17 +117,8 @@ def main():
                     st.write(f"**Build up**: {jsonData['Build up']}")
                 with col4:
                     st.write(f"**Irregularities**: {jsonData['Irregularities']}")
-                st.write("**References**:")
-                if 'References' in jsonData and jsonData['References']:
-                    for ref in jsonData['References']:
-                        title_url = ref.split(' (')
-                        if len(title_url) == 2:
-                            title = title_url[0].strip()
-                            url = title_url[1].strip(')')
-                            st.markdown(f"- [{title}]({url})")
-                        else:
-                            st.write("No references available.")
-                      
+                st.write(f"**References**: {jsonData['References']}")
+                
             else:
                 st.error("Please fill in all fields to analyze your paragraph.")
     
