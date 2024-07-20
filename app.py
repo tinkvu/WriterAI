@@ -63,7 +63,7 @@ def analyze_paragraph(prompt):
 def jsonResponse(response, api_key):
     genai.configure(api_key=api_key)
     model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
-    prompt = f"Make this {response} as a json with keys 'Overall interest','Vivid Rating','Build up','Irregularities','References' (Dont use any special characters here),'Summary','Suggestions','Strengths','Weaknesses'"
+    prompt = f"Make this {response} as a json with keys 'Overall interest','Vivid Rating','Build up','Irregularities','References' (Dont use any special characters here but try to get the link for the mentioned book),'Summary','Suggestions','Strengths','Weaknesses'"
     response = model.generate_content(prompt)
     jsonTry = response.text
     return jsonTry
