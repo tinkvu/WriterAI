@@ -94,8 +94,8 @@ def main():
                 
                 # Display the JSON data in a readable format
                 st.subheader("Analysis Result")
-                col1, col2, col3 = st.columns(3)
                 st.write(f"**Summary**: {jsonData['Summary']}")
+                col1, col2, col3 = st.columns(3)
                 with col1:
                     st.write("**Suggestions**:")
                     for suggestion in jsonData['Suggestions']:
@@ -108,10 +108,15 @@ def main():
                     st.write("**Weaknesses**:")
                     for weakness in jsonData['Weaknesses']:
                         st.write(f"- {weakness}")
-                st.write(f"**Overall interest**: {jsonData['Overall interest']}")
-                st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
-                st.write(f"**Build up**: {jsonData['Build up']}")
-                st.write(f"**Irregularities**: {jsonData['Irregularities']}")
+                col1, col2, col3, col4 = st.columns(4)
+                with col1:
+                    st.write(f"**Overall interest**: {jsonData['Overall interest']}")
+                with col2:
+                    st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
+                with col3:
+                    st.write(f"**Build up**: {jsonData['Build up']}")
+                with col4:
+                    st.write(f"**Irregularities**: {jsonData['Irregularities']}")
                 st.write(f"**References**: {(jsonData['References'])}")
                       
             else:
