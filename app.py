@@ -8,8 +8,8 @@ import google.generativeai as genai
 st.set_page_config(layout="wide")
 
 # Add API Keys before running
-genaiAPI = "AIzaSyCiVJZmXhOOc-SrwKx4KH6JXONvFEhMbnA"
-client = Together(api_key='e669705bf878b77a559f5dd9515caeb848ad23d245bcf532f458ff5f9d52a030')
+
+client = Together(api_key=togetherApi)
 
 def startTemplate(book_type, api_key):
     # Configure the Generative AI model
