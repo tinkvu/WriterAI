@@ -81,10 +81,21 @@ def main():
             response = analyze_paragraph(prompt)
             jsonRaw = jsonResponse(response, genaiAPI)
             jsonRaw = jsonRaw.replace("\n", "").replace("  ", "").replace("json", "").replace("`", "")
-            #jsonData = json.loads(jsonRaw)
+            jsonData = json.loads(jsonRaw)
 
+            
+            # Display the JSON data in a readable format
             st.subheader("Analysis Result")
-            st.write(jsonRaw)
+            st.write(f"**Overall interest**: {jsonData['Overall interest']}")
+            st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
+            st.write(f"**Build up**: {jsonData['Build up']}")
+            st.write(f"**Irregularities**: {jsonData['Irregularities']}")
+            st.write(f"**References**: {jsonData['References']}")
+            st.write(f"**Summary**: {jsonData['Summary']}")
+            st.write(f"**Suggestions**: {jsonData['Suggestions']}")
+            st.write(f"**Strengths**: {jsonData['Strengths']}")
+            st.write(f"**Weaknesses**: {jsonData['Weaknesses']}")
+        
         else:
             st.error("Please fill in all fields to analyze your paragraph.")
 
