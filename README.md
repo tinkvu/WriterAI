@@ -1,6 +1,6 @@
-# GenAI & TogetherAI Integration
+#The writing paper you need in 21st Centuary!
 
-Welcome to the GenAI & TogetherAI Integration repository! This project demonstrates how to utilize the GenAI and TogetherAI APIs in a streamlined application. Follow the steps below to get started.
+Welcome to the WriterAI repository! This project integrates the GenAI and MetaLlama3 to provide a powerful writing assistant tool. You can either run the application locally or access it online. Follow the instructions below for both options.
 
 ## Getting Started
 
