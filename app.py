@@ -117,7 +117,10 @@ def main():
                     st.write(f"**Build up**: {jsonData['Build up']}")
                 with col4:
                     st.write(f"**Irregularities**: {jsonData['Irregularities']}")
-                st.write(f"**References**: {(jsonData['References'])}")
+                st.write("**References**:")
+                for ref in jsonData['References']:
+                    title, url = re.split(r'\s\(', ref)
+                    st.markdown(f"- [{title.strip()}]({url.strip(')')})")
                       
             else:
                 st.error("Please fill in all fields to analyze your paragraph.")
