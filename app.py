@@ -102,11 +102,11 @@ def main():
                 with col2:
                     st.write("**Strengths**:")
                     for strength in jsonData['Strengths']:
-                        st.write(f"- {strength}")
+                    st.write(f"- {strength}")
                 with col3:
                     st.write("**Weaknesses**:")
                     for weakness in jsonData['Weaknesses']:
-                        st.write(f"- {weakness}")
+                    st.write(f"- {weakness}")
                 st.write(f"**Overall interest**: {jsonData['Overall interest']}")
                 st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
                 st.write(f"**Build up**: {jsonData['Build up']}")
