@@ -1,4 +1,4 @@
-#The writing paper you need in 21st Centuary!
+# The writing paper you need in 21st Centuary!
 
 Welcome to the WriterAI repository! This project integrates the GenAI and MetaLlama3 to provide a powerful writing assistant tool. You can either run the application locally or access it online. Follow the instructions below for both options.
 
