@@ -138,11 +138,13 @@ def main():
             else:
                 st.error("Please fill in all fields to analyze your paragraph.")
     
-        st.subheader("Current Content")
-        st.write(f"**Title**: {book_title}")
-        st.write(f"**Type**: {book_type}")
-        st.write("**Content**:")
-        st.write(novel_text)
+        # Display the "Current Content" section only if content is available
+        if book_title or book_type or novel_text:
+            st.subheader("Current Content")
+            st.write(f"**Title**: {book_title if book_title else 'N/A'}")
+            st.write(f"**Type**: {book_type if book_type else 'N/A'}")
+            st.write("**Content**:")
+            st.write(novel_text if novel_text else 'No content available.')
 
 # Run the app
 if __name__ == "__main__":
