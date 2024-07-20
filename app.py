@@ -85,7 +85,7 @@ def jsonResponse(response, api_key):
 
 # Initialize the app
 def main():
-    st.title("writerr.io")
+    st.title("writerr 🖋")
     st.write("The ultimate page for Today's writers 👀")
     # Create two columns
     col1, col2 = st.columns(2)
