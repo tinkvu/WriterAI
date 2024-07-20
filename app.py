@@ -17,7 +17,7 @@ def startTemplate(book_type, api_key):
     model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
 
     # Define the prompt for generating the placeholder text
-    prompt = f"Give a small instruction or prompt to write a {book_type} novel"
+    prompt = f"You are a writing expert. So suggest short ways to start writing a {book_type}"
 
     # Generate the placeholder text using the model
     response = model.generate_content(prompt)
