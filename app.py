@@ -107,7 +107,7 @@ def main():
                 st.write(f"**Vivid Rating**: {jsonData['Vivid Rating']}")
                 st.write(f"**Build up**: {jsonData['Build up']}")
                 st.write(f"**Irregularities**: {jsonData['Irregularities']}")
-                st.write(f"**References**: {', '.join(jsonData['References'])}")
+                st.write(f"**References**: {(jsonData['References'])}")
                       
             else:
                 st.error("Please fill in all fields to analyze your paragraph.")
