@@ -72,10 +72,8 @@ We welcome contributions! If you'd like to contribute, please follow the standar
 3. Make your changes.
 4. Submit a pull request.
 
-## License
 
-This project is licensed under the [MIT License](LICENSE).
 
-For any questions or issues, feel free to open an issue on the [GitHub repository](https://github.com/your-username/your-repo-name/issues).
+For any questions or issues, feel free to open an issue on the [GitHub repository](https://github.com/tinkvu/WriterAI/issues).
 
 Happy coding! 🚀
