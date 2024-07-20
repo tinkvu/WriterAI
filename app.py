@@ -8,6 +8,8 @@ import google.generativeai as genai
 st.set_page_config(layout="wide")
 
 # Add API Keys before running
+#genaiAPI=""
+#togetherApi=""
 
 client = Together(api_key=togetherApi)
 
