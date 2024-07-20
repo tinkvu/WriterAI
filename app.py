@@ -11,6 +11,21 @@ st.set_page_config(layout="wide")
 genaiAPI = "AIzaSyCiVJZmXhOOc-SrwKx4KH6JXONvFEhMbnA"
 client = Together(api_key='e669705bf878b77a559f5dd9515caeb848ad23d245bcf532f458ff5f9d52a030')
 
+def startTemplate(book_type, api_key):
+    # Configure the Generative AI model
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
+
+    # Define the prompt for generating the placeholder text
+    prompt = f"Give a small instruction or prompt to write a {book_type} novel"
+
+    # Generate the placeholder text using the model
+    response = model.generate_content(prompt)
+    placeholder_text = response.text.strip()  # Ensure the text is clean and formatted
+
+    return placeholder_text
+
+
 # Summarize paragraphs using the Google Generative AI API
 def summarize_paragraphs(paragraphs, api_key):
     genai.configure(api_key=api_key)
@@ -78,8 +93,9 @@ def main():
     with col1:
         st.header("Editor")
         book_title = st.text_input("Book Title")
-        book_type = st.text_input("Book Type")
-        novel_text = st.text_area("Write your novel here...", height=300, key="novel_text")
+        book_type = st.text_input("Book Type", on_change=lambda: st.session_state.update({"template": startTemplate(st.session_state.get("book_type", ""))}))
+        novel_text_placeholder = st.session_state.get("template", "Start writing your novel here...")
+        novel_text = st.text_area("Write your novel here...", height=300, key="novel_text", placeholder=novel_text_placeholder)
 
     with col2:
         if st.button("Analyze Paragraph"):
