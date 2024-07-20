@@ -120,13 +120,13 @@ def main():
                 st.write("**References**:")
                 if 'References' in jsonData and jsonData['References']:
                     for ref in jsonData['References']:
-                    title_url = ref.split(' (')
-                    if len(title_url) == 2:
-                        title = title_url[0].strip()
-                        url = title_url[1].strip(')')
-                        st.markdown(f"- [{title}]({url})")
-                    else:
-                        st.write("No references available.")
+                        title_url = ref.split(' (')
+                        if len(title_url) == 2:
+                            title = title_url[0].strip()
+                            url = title_url[1].strip(')')
+                            st.markdown(f"- [{title}]({url})")
+                        else:
+                            st.write("No references available.")
                       
             else:
                 st.error("Please fill in all fields to analyze your paragraph.")
