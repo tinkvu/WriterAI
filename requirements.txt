@@ -1,1 +1,2 @@
 together
+google-generativeai
