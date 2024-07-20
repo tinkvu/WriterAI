@@ -95,7 +95,7 @@ def main():
         book_type = st.text_input("Book Type",placeholder="Write the type of book you're gonna write 🖋. Like Novel, short story..." ,on_change=lambda: st.session_state.update({"template": startTemplate(st.session_state.get("book_type", ""), genaiAPI)}))
         novel_text_placeholder = st.session_state.get("template", "Start writing your novel here...")
         book_title = st.text_input("Book Title", placeholder="Give a catchy title 😉")
-        novel_text = st.text_area("Write your novel here... ✏", height=300, key="novel_text", placeholder=novel_text_placeholder)
+        novel_text = st.text_area("Add the book type above first before starting ✏", height=300, key="novel_text", placeholder=novel_text_placeholder)
 
     with col2:
         if st.button("Analyze Paragraph"):
