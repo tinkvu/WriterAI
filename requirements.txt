@@ -1,2 +1,3 @@
 together
 google-generativeai
+streamlit
