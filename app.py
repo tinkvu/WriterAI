@@ -146,6 +146,12 @@ def main():
             st.write("**Content**:")
             st.write(novel_text if novel_text else 'No content available.')
 
+
+        # Display the template message if available
+        if 'template' in st.session_state:
+            st.subheader("Template")
+            st.write(st.session_state['template'])
+
 # Run the app
 if __name__ == "__main__":
     main()
