@@ -87,8 +87,9 @@ def jsonResponse(response, api_key):
 
 # Initialize the app
 def main():
-    st.title("writerr 🖋")
+    st.title("writer.ai 🖋")
     st.write("The ultimate page for Today's writers 👀")
+    st.write("Lablab AI Hackathon: Llama Hash")
     # Create two columns
     col1, col2 = st.columns(2)
 
